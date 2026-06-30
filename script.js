@@ -1,3 +1,5 @@
+import { startAuth } from "./js/auth.js";
+
 const todayISO = new Date().toISOString().slice(0, 10);
 
 const defaultData = {
@@ -774,4 +776,8 @@ document.querySelectorAll(".form-toggle").forEach(button => {
 
     button.textContent = isOpen ? `− ${label}` : `+ ${label}`;
   });
+});
+
+startAuth((user) => {
+  console.log("Signed in as:", user.email);
 });
