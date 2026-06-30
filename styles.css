@@ -871,12 +871,19 @@ a {
 
     display: grid;
     grid-template-columns: 40px 1fr auto;
-
     align-items: center;
 
     font-size: 26px;
     font-weight: 700;
     color: var(--pink-700);
+}
+
+.year-box summary span:first-of-type{
+    justify-self:center;
+}
+
+.year-box summary span:last-of-type{
+    justify-self:end;
 }
 
 .year-box summary::before {
