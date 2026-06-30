@@ -682,3 +682,15 @@ function renderAll() {
 }
 
 renderAll();
+
+document
+    .getElementById("toggleClassification")
+    .addEventListener("click", () => {
+
+        classificationVisible = !classificationVisible;
+
+        document.getElementById("toggleClassification").textContent =
+            classificationVisible ? "Hide" : "Show";
+
+        renderDashboard();
+    });
