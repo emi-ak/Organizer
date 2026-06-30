@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Em's Planner</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+  <div class="bg-orb orb-three"></div>
+
+  <button class="mobile-menu" id="mobileMenu">☰</button>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo">✦</div>
+      <div>
+        <h1>Em's Planner</h1>
+        <p>Psalm 16:8</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="nav-link active" data-page="dashboard">Dashboard</button>
+      <button class="nav-link" data-page="activities">Activity Tracker</button>
+      <button class="nav-link" data-page="timeline">Timeline</button>
+      <button class="nav-link" data-page="coursework">Coursework</button>
+      <button class="nav-link" data-page="vision">Vision Board</button>
+      <button class="nav-link" data-page="affirmations">Affirmations</button>
+      <button class="nav-link" data-page="resources">Resources</button>
+      <button class="nav-link" data-page="goals">To Do List</button>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="dashboard" class="page active">
+      <div class="page-header hero">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h2>Dashboard</h2>
+        </div>
+      </div>
+
+      <div class="widget-grid">
+        <div class="glass-widget">
+          <p>Total Activity Hours</p>
+          <h3 id="dashTotalHours">0</h3>
+          <span>Across all activities</span>
+        </div>
+        <div class="glass-widget">
+          <p>Overall Activity Progress</p>
+          <h3 id="dashActivityProgress">0%</h3>
+          <span>Hours completed vs goals</span>
+        </div>
+        <div class="glass-widget">
+          <p>Modules</p>
+          <h3 id="dashModules">0</h3>
+          <span>Total modules entered</span>
+        </div>
+        <div class="glass-widget">
+          <p>Current Classification</p>
+          <h3 id="dashClassification">—</h3>
+          <span>Average of module totals</span>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="glass-card">
+          <h3>Activity Rings</h3>
+          <div id="dashboardRings" class="rings-grid"></div>
+        </div>
+        <div class="glass-card">
+          <h3>Upcoming Timeline</h3>
+          <div id="dashboardTimeline" class="stack"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Experience tracker</p>
+          <h2>Activity Tracker</h2>
+        </div>
+      </div>
+
+      <form id="categoryForm" class="form-card">
+        <h3>Add Category</h3>
+        <input id="categoryName" placeholder="Category e.g. Volunteering" required />
+        <input id="categoryGoal" type="number" placeholder="Goal hours e.g. 120" min="1" required />
+        <button>Add Category</button>
+      </form>
+
+      <form id="activityForm" class="form-card">
+        <h3>Add Specific Activity</h3>
+        <select id="activityCategory" required></select>
+        <input id="activityName" placeholder="Activity name e.g. Hospital volunteering" required />
+        <input id="activityDate" type="date" required />
+        <input id="activityHours" type="number" placeholder="Hours completed" min="0" step="0.5" required />
+        <textarea id="activityNotes" placeholder="Notes, responsibilities, reflection"></textarea>
+        <button>Add Activity</button>
+      </form>
+
+      <div id="activityList" class="activity-grid"></div>
+    </section>
+
+    <section id="timeline" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Roadmap</p>
+          <h2>Timeline</h2>
+        </div>
+      </div>
+
+      <form id="timelineForm" class="form-card">
+        <h3>Add Milestone</h3>
+        <input id="timelineTitle" placeholder="Milestone e.g. Start MCAT prep" required />
+        <input id="timelineDate" type="date" required />
+        <select id="timelineType">
+          <option>Academic</option>
+          <option>MCAT</option>
+          <option>Application</option>
+          <option>Interview</option>
+          <option>Personal</option>
+          <option>Extracurriculars</option>
+        </select>
+        <textarea id="timelineNotes" placeholder="Notes"></textarea>
+        <button>Add Milestone</button>
+      </form>
+
+      <div id="timelineList" class="timeline"></div>
+    </section>
+
+    <section id="coursework" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Academics</p>
+          <h2>Coursework</h2>
+        </div>
+      </div>
+
+      <form id="moduleForm" class="form-card">
+        <h3>Add Module</h3>
+        <input id="moduleName" placeholder="Module name e.g. Cell Biology" required />
+        <select id="moduleTerm" required>
+          <option value="">Select term</option>
+          <option>Term 1</option>
+          <option>Term 2</option>
+          <option>Term 3</option>
+        </select>
+        <button>Add Module</button>
+      </form>
+
+      <form id="assignmentForm" class="form-card">
+        <h3>Add Assignment to Module</h3>
+        <select id="assignmentModule" required></select>
+        <input id="assignmentName" placeholder="Assignment e.g. Lab report" required />
+        <input id="assignmentMark" type="number" placeholder="Mark % e.g. 72" min="0" max="100" step="0.1" required />
+        <input id="assignmentWeight" type="number" placeholder="Weighting % e.g. 30" min="0" max="100" step="0.1" required />
+        <input id="assignmentDate" type="date" />
+        <button>Add Assignment</button>
+      </form>
+
+      <div class="glass-card">
+        <h3>Average of Module Totals: <span id="moduleAverageDisplay">—</span></h3>
+        <p class="hint" id="classificationDisplay">Classification: —</p>
+        <div class="grade-scale">
+          <span>1st Honors: 70%–100%</span>
+          <span>2:1 Honors: 60%–69%</span>
+          <span>2:2 Honors: 50%–59%</span>
+          <span>3rd Honors: 40%–49%</span>
+        </div>
+        <div id="moduleList"></div>
+      </div>
+    </section>
+
+    <section id="vision" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Inspiration</p>
+          <h2>Vision Board</h2>
+          <p class="hint">Dream it. Believe it. Achieve it.</p>
+        </div>
+      </div>
+
+      <form id="visionForm" class="form-card">
+        <h3>Insert Image</h3>
+        <input id="visionImageFile" type="file" accept="image/*" required />
+        <input id="visionTitle" placeholder="Optional title" />
+        <textarea id="visionQuote" placeholder="Optional quote or note"></textarea>
+        <button>Insert Image</button>
+      </form>
+
+      <div id="visionBoard" class="vision-grid"></div>
+    </section>
+
+    <section id="affirmations" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Motivation</p>
+          <h2>Affirmations & Bible Verses</h2>
+        </div>
+        <button id="shuffleAffirmation" class="soft-btn">Shuffle</button>
+      </div>
+
+      <div class="affirmation-card">
+        <p id="affirmationText"></p>
+      </div>
+
+      <form id="affirmationForm" class="form-card">
+        <h3>Add Your Own</h3>
+        <input id="affirmationDate" type="date" required />
+        <textarea id="newAffirmation" placeholder="Write an affirmation or Bible verse..." required></textarea>
+        <button>Add Affirmation</button>
+      </form>
+
+      <div id="affirmationList" class="stack"></div>
+    </section>
+
+    <section id="resources" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Application support</p>
+          <h2>Resources</h2>
+        </div>
+      </div>
+
+      <form id="resourceForm" class="form-card">
+        <h3>Save Resource</h3>
+        <input id="resourceTitle" placeholder="Title e.g. AMCAS Guide" required />
+        <input id="resourceUrl" placeholder="URL" />
+        <textarea id="resourceNotes" placeholder="Notes/checklist"></textarea>
+        <button>Save Resource</button>
+      </form>
+
+      <div id="resourceList" class="grid-list"></div>
+    </section>
+
+    <section id="goals" class="page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Focus</p>
+          <h2>To Do List</h2>
+        </div>
+      </div>
+
+      <form id="goalForm" class="form-card">
+        <h3>Add Task</h3>
+        <input id="goalText" placeholder="Task e.g. Email 3 professors for research" required />
+        <input id="goalDueDate" type="date" required />
+        <input id="goalCategory" placeholder="Category e.g. Research, MCAT, Fitness" required />
+        <select id="goalImportance" required>
+          <option value="">Select importance</option>
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+        <button>Add Task</button>
+      </form>
+
+      <div id="goalList" class="stack"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
