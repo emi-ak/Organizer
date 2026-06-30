@@ -880,3 +880,26 @@ a {
 .year-box summary::-webkit-details-marker {
   display: none;
 }
+
+.year-box summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year-box summary::before {
+    content: "▸";
+    margin-right: 12px;
+    font-size: 18px;
+    transition: transform .25s ease;
+}
+
+.year-box[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.year-box summary::-webkit-details-marker {
+    display: none;
+}
