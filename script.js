@@ -28,9 +28,9 @@ const defaultData = {
   ],
   vision: [],
   affirmations: [
-    { id: crypto.randomUUID(), date: todayISO, text: "I am building my future one disciplined day at a time." },
-    { id: crypto.randomUUID(), date: todayISO, text: "God has not given me a spirit of fear, but of power, love, and self-control. — 2 Timothy 1:7" },
-    { id: crypto.randomUUID(), date: todayISO, text: "Commit your work to the Lord, and your plans will be established. — Proverbs 16:3" }
+    { id: crypto.randomUUID(), date: todayISO, text: "Come to me, all you who are weary and burdened, and I will give you rest. ~ Matthew 11:28" },
+    { id: crypto.randomUUID(), date: todayISO, text: "God has not given me a spirit of fear, but of power, love, and self-control. ~ 2 Timothy 1:7" },
+    { id: crypto.randomUUID(), date: todayISO, text: "Commit your work to the Lord, and your plans will be established. ~ Proverbs 16:3" }
   ],
   resources: [
     { id: crypto.randomUUID(), title: "AMCAS Applicant Guide", url: "https://students-residents.aamc.org/applying-medical-school-amcas/applying-medical-school-amcas", notes: "Primary application information." }
