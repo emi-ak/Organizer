@@ -866,7 +866,7 @@ a {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 50px;
   align-items: center;
   font-size: 26px;
   font-weight: 700;
