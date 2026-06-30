@@ -257,8 +257,16 @@ function renderDashboard() {
   dashTotalHours.textContent = completedHours;
   dashActivityProgress.textContent = `${percent(completedHours, goalHours)}%`;
   dashModules.textContent = data.modules.length;
-  const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
-  dashClassification.textContent = classificationVisible ? classification : "••••••";
+  const classificationElement = document.getElementById("dashClassification");
+  
+  document.getElementById("toggleClassification").addEventListener("click", () => {
+    classificationVisible = !classificationVisible;
+
+    classificationElement.classList.toggle("show", classificationVisible);
+
+    document.getElementById("toggleClassification").textContent =
+        classificationVisible ? "Hide" : "Show";
+});
 
   dashboardRings.innerHTML = data.categories.map(c => ringHTML(c.name, totalHours(c), c.goal)).join("");
 
