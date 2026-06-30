@@ -865,18 +865,6 @@ a {
     margin-top: 26px;
 }
 
-.year-box summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  align-items: center;
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--pink-700);
-}
-
 .year-box summary::-webkit-details-marker {
   display: none;
 }
@@ -884,15 +872,21 @@ a {
 .year-box summary {
     list-style: none;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+
     align-items: center;
+
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--pink-700);
 }
 
 .year-box summary::before {
     content: "▸";
-    margin-right: 12px;
     font-size: 18px;
+    justify-self: center;
     transition: transform .25s ease;
 }
 
