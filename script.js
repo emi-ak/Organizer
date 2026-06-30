@@ -11,7 +11,7 @@ const defaultData = {
     { id: crypto.randomUUID(), name: "Leadership", goal: 100, activities: [] }
   ],
   timeline: [
-    { id: crypto.randomUUID(), title: "Start MCAT content review", date: "2026-09-01", type: "MCAT", notes: "Build weekly study schedule." },
+    { id: crypto.randomUUID(), title: "MCAT content review", date: "2026-09-01", type: "MCAT", notes: "Build weekly study schedule." },
     { id: crypto.randomUUID(), title: "Join one extracurricular project", date: "2026-10-01", type: "Extracurriculars", notes: "Choose something meaningful and consistent." },
     { id: crypto.randomUUID(), title: "Ask for letters of recommendation", date: "2027-02-01", type: "Application", notes: "Prepare CV and activity list." }
   ],
