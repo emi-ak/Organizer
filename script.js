@@ -697,3 +697,15 @@ document.getElementById("toggleClassification").addEventListener("click", () => 
   document.getElementById("toggleClassification").textContent =
     classificationVisible ? "Hide" : "Show";
 });
+
+document.querySelectorAll(".form-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const form = document.getElementById(button.dataset.target);
+    form.classList.toggle("open");
+
+    const isOpen = form.classList.contains("open");
+    const label = button.textContent.replace("+ ", "").replace("− ", "").trim();
+
+    button.textContent = isOpen ? `− ${label}` : `+ ${label}`;
+  });
+});
