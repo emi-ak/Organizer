@@ -256,10 +256,11 @@ function renderDashboard() {
   dashTotalHours.textContent = completedHours;
   dashActivityProgress.textContent = `${percent(completedHours, goalHours)}%`;
   dashModules.textContent = data.modules.length;
-  const classification =
-    moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
+  const moduleAverage = averageOfModuleTotals();
+  const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
+  
   dashClassification.textContent =
-    classificationVisible ? classification : "••••••";
+    classificationVisible ? classification : "";
 
   dashboardRings.innerHTML = data.categories.map(c => ringHTML(c.name, totalHours(c), c.goal)).join("");
 
@@ -684,14 +685,15 @@ function renderAll() {
 
 renderAll();
 
-document
-    .getElementById("toggleClassification")
-    .addEventListener("click", () => {
+document.getElementById("toggleClassification").addEventListener("click", () => {
+  classificationVisible = !classificationVisible;
 
-        classificationVisible = !classificationVisible;
+  const moduleAverage = averageOfModuleTotals();
+  const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
 
-        document.getElementById("toggleClassification").textContent =
-            classificationVisible ? "Hide" : "Show";
+  document.getElementById("dashClassification").textContent =
+    classificationVisible ? classification : "";
 
-        renderDashboard();
-    });
+  document.getElementById("toggleClassification").textContent =
+    classificationVisible ? "Hide" : "Show";
+});
