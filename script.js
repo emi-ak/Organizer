@@ -43,6 +43,8 @@ const defaultData = {
 
 let data = JSON.parse(localStorage.getItem("emsPlannerData")) || defaultData;
 
+let classificationVisible = false;
+
 function save() {
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
   renderAll();
