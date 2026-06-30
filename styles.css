@@ -873,30 +873,29 @@ a {
     grid-template-columns: 40px 1fr auto;
     align-items: center;
 
+    padding: 6px 0;
+
     font-size: 26px;
     font-weight: 700;
     color: var(--pink-700);
 }
 
-.year-box summary span:first-of-type{
+.year-title{
     justify-self:center;
+    text-align:center;
 }
 
-.year-box summary span:last-of-type{
+.year-average{
     justify-self:end;
 }
 
-.year-box summary::before {
-    content: "▸";
-    justify-self: center;
-    font-size: 18px;
-    transition: transform .25s ease;
+.year-arrow::before{
+    content:"▶";
+    display:block;
+    font-size:18px;
+    transition:.25s ease;
 }
 
-.year-box[open] summary::before {
-    transform: rotate(90deg);
-}
-
-.year-box summary::-webkit-details-marker {
-    display: none;
+.year-box[open] .year-arrow::before{
+    transform:rotate(90deg);
 }
