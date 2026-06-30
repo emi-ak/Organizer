@@ -900,7 +900,6 @@ a {
     transform:rotate(90deg);
 }
 
-/* Affirmations: keep buttons on the right and let verse wrap */
 #affirmationList .item-header {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -923,7 +922,6 @@ a {
   flex-direction: row;
 }
 
-/* Shuffle card: preserve Enter/new lines */
 #affirmationText {
   white-space: pre-line;
 }
