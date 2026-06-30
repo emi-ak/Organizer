@@ -438,8 +438,15 @@ function renderModules() {
     return `
       <details class="year-box">
         <summary>
-          <span>${year}</span>
-          <span>${yearAverage ? `${yearAverage}% (${classifyUK(Number(yearAverage))})` : "No marks yet"}</span>
+          <span class="year-arrow"></span>
+          <span class="year-title">
+          ${year}
+          </span>
+          <span class="year-average">
+          ${yearAverage
+            ? `${yearAverage}% (${classifyUK(Number(yearAverage))})`
+            : "No marks yet"}
+          </span>
         </summary>
 
         ${yearModules.length ? yearModules.map(module => {
