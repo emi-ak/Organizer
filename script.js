@@ -424,7 +424,7 @@ function renderModules() {
       : "";
 
     return `
-      <details class="year-box" open>
+      <details class="year-box">
         <summary>
           <span>${year}</span>
           <span>${yearAverage ? `${yearAverage}% (${classifyUK(Number(yearAverage))})` : "No marks yet"}</span>
