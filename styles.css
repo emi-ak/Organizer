@@ -1548,6 +1548,9 @@ body.theme-orange {
   text-align: left;
   border-radius: 14px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .settings-button:hover {
