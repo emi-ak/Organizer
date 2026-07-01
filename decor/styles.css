@@ -389,24 +389,6 @@ button:hover {
 
 /*------------------------------------------------------*/
 /* Resources */
-
-/*------------------------------------------------------*/
-/* To Do List */
-.importance-high {
-  background: var(--importancehigh-background) !important;
-  color: white !important;
-}
-
-.importance-medium {
-  background: var(--importancemed-background) !important;
-  color: var(--pink-700) !important;
-}
-
-.importance-low {
-  background: var(--importancelow-background) !important;
-  color: var(--pink-700) !important;
-}
-/*------------------------------------------------------*/
 /* Media */
 @media (max-width: 1180px) {
   .widget-grid {
