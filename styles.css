@@ -1201,6 +1201,32 @@ body.theme-blue {
   overflow-x: hidden;
 }
 
+body.theme-orange {
+  --pink-50: #ffd6a1;
+  --pink-100: #f0c58d;
+  --pink-200: #edb974;
+  --pink-300: #e6af67;
+  --pink-500: #f5b158;
+  --pink-700: #f7a63b;
+  --text: #4f3006;
+  --muted: #915709;
+  --border: rgba(190, 165, 230, 0.45);
+
+  --orb-1: #f0d9bb
+  --orb-2: #ffbf80
+  --orb-3: #f5912f
+
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
+    linear-gradient(135deg, #fcd9b6 0%, #fac38c 42%, #fffdf8 100%);
+  display: flex;
+  overflow-x: hidden;
+}
+
 @media (min-width: 821px) {
   main {
     margin-left: 320px !important;
