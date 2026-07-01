@@ -569,23 +569,6 @@ window.updateResource = updateResource;
 window.updateGoal = updateGoal;
 window.toggleGoal = toggleGoal;
 
-const draftFields = document.querySelectorAll("input, textarea, select");
-
-draftFields.forEach(field => {
-  if (!field.id) return;
-
-  const savedValue = localStorage.getItem(`draft-${field.id}`);
-  if (savedValue !== null) field.value = savedValue;
-
-  field.addEventListener("input", () => {
-    localStorage.setItem(`draft-${field.id}`, field.value);
-  });
-
-  field.addEventListener("change", () => {
-    localStorage.setItem(`draft-${field.id}`, field.value);
-  });
-});
-
 function applyTheme(theme) {
   document.body.classList.remove(
     "theme-butter",
