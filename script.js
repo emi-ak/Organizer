@@ -885,8 +885,7 @@ function applyTheme(theme) {
     "theme-sage",
     "theme-lavender"
     "theme-blue"
-    "theme-orange"
-  );
+    "theme-orange");
 
   if (theme !== "pink") {
     document.body.classList.add(`theme-${theme}`);
