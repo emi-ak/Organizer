@@ -1200,3 +1200,13 @@ body.theme-lavender {
   padding: 10px 12px;
   font-size: 16px;
 }
+
+.floating-sync {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9998;
+  margin: 0;
+  width: auto;
+  min-width: 180px;
+}
