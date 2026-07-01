@@ -191,7 +191,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--glass-strong);
   border: 1px solid var(--logoborder);
   box-shadow: 0 10px 22px var(--logoshadow);
   
@@ -501,7 +501,7 @@ button:hover {
   text-align: center;
   padding: 16px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.42);
+  background: var(--glass);
   border: 1px solid var(--ringcard-border);
 }
 
