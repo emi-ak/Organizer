@@ -40,16 +40,6 @@
       </div>
     </div>
 
-    <div class="user-card">
-      <p id="userName">Welcome back</p>
-      <small id="userEmail"></small>
-      <button id="logoutButton" class="soft-btn">Sign Out</button>
-    </div>
-
-    <div id="syncStatus" class="sync-status">
-      ☁️ All changes saved
-    </div>
-
     <nav>
       <button class="nav-link active" data-page="dashboard">Dashboard</button>
       <button class="nav-link" data-page="activities">Activity Tracker</button>
@@ -59,9 +49,33 @@
       <button class="nav-link" data-page="affirmations">Affirmations</button>
       <button class="nav-link" data-page="resources">Resources</button>
       <button class="nav-link" data-page="goals">To Do List</button>
-      <button class="nav-link" data-page="settings">Settings</button>
     </nav>
-  </aside>
+
+    <div class="sidebar-bottom">
+      
+        <button
+            class="settings-button"
+            data-page="settings">
+            ⚙ Settings
+        </button>
+    
+        <div id="syncStatus" class="sync-status">
+            ☁️ All changes saved
+        </div>
+    
+        <div class="user-card">
+            <p id="userName">Welcome back</p>
+            <small id="userEmail"></small>
+    
+            <button
+                id="logoutButton"
+                class="soft-btn">
+                Sign Out
+            </button>
+        </div>
+    </div>
+    
+    </aside>
 
   <main>
     <section id="settings" class="page">
