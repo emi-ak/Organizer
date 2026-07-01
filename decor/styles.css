@@ -1,29 +1,5 @@
 
 /* Overall */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--text);
-  background:
-    radial-gradient(circle at 10% 10%, var(--orb-1), transparent 28%),
-    radial-gradient(circle at 88% 12%, var(--orb-2), transparent 30%),
-    linear-gradient(
-      135deg, 
-      var(--bg-1) 0%, 
-      var(--bg-2) 42%, 
-      var(--bg-3) 100%
-    );
-  display: flex;
-  overflow-x: hidden;
-}
 
 .bg-orb {
   position: fixed;
