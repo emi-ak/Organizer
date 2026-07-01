@@ -1540,6 +1540,7 @@ body.theme-orange {
 
 .settings-button {
   width: 100%;
+  position: relative;
   background: transparent;
   color: var(--text);
   border: 1px solid var(--border);
@@ -1549,24 +1550,18 @@ body.theme-orange {
   border-radius: 18px;
   font-size: 18px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+}
+
+.settings-button .icon {
+  position: absolute;
+  right: 16px;
+  width: auto;
 }
 
 .settings-button:hover {
   background: var(--settings-hover);
   border-color: var(--nav-link-border);
   transform: translateX(3px);
-}
-
-.settings-button .icon {
-  width: 14px;
-  min-width: 14px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
 
 .sync-status {
