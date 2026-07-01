@@ -74,6 +74,10 @@
   --ring-center: rgba(255, 255, 255, 0.90);
   --settings-hover: rgba(255, 234, 244, 0.65);
   --yearbox-background: rgba(255, 255, 255, 0.50);
+
+  --primary: var(--pink-500)
+  --primary-dark: var(--pink-700)
+  --primary-light: var(--pink-300)
 }
 
 * {
@@ -434,7 +438,10 @@ textarea {
 }
 
 button {
-  background: linear-gradient(135deg, var(--pink-500), var(--pink-700));
+  background: linear-gradient(
+    135deg, 
+    var(--primary), 
+    var(--primary-dark));
   color: white;
   border: 0;
   border-radius: 18px;
@@ -1183,6 +1190,10 @@ body.theme-cream {
   --settings-hover: rgba(242, 231, 220, 0.65);
   --yearbox-background: rgba(255, 252, 248, 0.50);
   --shadow: 0 24px 70px rgba(115, 109, 100, 0.16);
+
+  --primary:var(--pink-500)
+  --primary-dark: var(--pink-700)
+  --primary-light: var(--pink-300)
 }
 
 body.theme-sage {
@@ -1257,6 +1268,10 @@ body.theme-sage {
   --yearbox-background: rgba(247, 250, 245, 0.50);
 
   --shadow: 0 24px 70px rgba(87, 99, 76, 0.16);
+
+  --primary:var(--pink-500)
+  --primary-dark: var(--pink-700)
+  --primary-light: var(--pink-300)
 }
 
 body.theme-lavender {
@@ -1331,6 +1346,10 @@ body.theme-lavender {
   --yearbox-background: rgba(249, 247, 252, 0.50);
 
   --shadow: 0 24px 70px rgba(115, 92, 153, 0.16);
+
+  --primary:var(--pink-500)
+  --primary-dark: var(--pink-700)
+  --primary-light: var(--pink-300)
 }
 
 body.theme-blue {
@@ -1405,6 +1424,10 @@ body.theme-blue {
   --yearbox-background: rgba(247, 250, 254, 0.50);
 
   --shadow: 0 24px 70px rgba(106, 133, 156, 0.16);
+
+  --primary:var(--pink-500)
+  --primary-dark: var(--pink-700)
+  --primary-light: var(--pink-300)
 }
 
 body.theme-orange {
@@ -1479,6 +1502,10 @@ body.theme-orange {
   --yearbox-background: rgba(255, 250, 245, 0.50);
 
   --shadow: 0 24px 70px rgba(247, 166, 59, 0.16);
+
+  --primary:var(--pink-500)
+  --primary-dark: var(--pink-700)
+  --primary-light: var(--pink-300)
 }
 
 @media (min-width: 821px) {
