@@ -76,9 +76,9 @@
   --settings-hover: rgba(255, 234, 244, 0.65);
   --yearbox-background: rgba(255, 255, 255, 0.50);
 
-  --primary: var(--pink-500)
-  --primary-dark: var(--pink-700)
-  --primary-light: var(--pink-300)
+  --primary: var(--pink-500);
+  --primary-dark: var(--pink-700);
+  --primary-light: var(--pink-300);
 }
 /*------------------------------------------------------*/
 /* Overall */
