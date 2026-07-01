@@ -1072,6 +1072,8 @@ a {
 
 .user-card #logoutButton {
   margin-top: 12px;
+  padding: 10px 12px;
+  font-size: 16px;
 }
 
 .sync-status {
@@ -1519,25 +1521,6 @@ body.theme-orange {
   margin: 0;
   padding: 10px 12px;
   font-size: 15px;
-}
-
-.user-card {
-  margin: 0;
-  padding: 14px;
-  border-radius: 20px;
-}
-
-.user-card p {
-  font-size: 18px;
-}
-
-.user-card small {
-  font-size: 14px;
-}
-
-#logoutButton {
-  padding: 10px 12px;
-  font-size: 16px;
 }
 
 .floating-sync {
