@@ -926,15 +926,67 @@ a {
   white-space: pre-line;
 }
 
-.auth-buttons{
-    display:grid;
-    gap:12px;
-    margin-bottom:24px;
-}
-
 #loginButton,
 #logoutButton{
 
     width:100%;
 
 }
+
+.auth-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 210, 232, 0.95), transparent 30%),
+    linear-gradient(135deg, #fff7fb, #fffdf8);
+}
+
+.auth-screen.hidden {
+  display: none;
+}
+
+.auth-card {
+  width: min(520px, 100%);
+  padding: 46px;
+  border-radius: 34px;
+  text-align: center;
+  background: rgba(255,255,255,.62);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px);
+}
+
+.auth-card h1 {
+  font-size: 54px;
+  margin: 0 0 8px;
+}
+
+.auth-card p {
+  color: var(--muted);
+}
+
+.user-card {
+  margin: 18px 0 28px;
+  padding: 14px;
+  border-radius: 20px;
+  background: rgba(255, 234, 244, 0.65);
+  border: 1px solid var(--border);
+}
+
+.user-card p {
+  margin: 0;
+  font-weight: 700;
+  color: var(--pink-700);
+}
+
+.user-card small {
+  display: block;
+  color: var(--muted);
+  margin: 4px 0 12px;
+  word-break: break-word;
+}
+
