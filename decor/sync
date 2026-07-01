@@ -1,0 +1,29 @@
+.sync-status {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: var(--syncback);
+  border: 1px solid var(--border);
+  color: var(--pink-700);
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+
+.sync-status.saving {
+  opacity: 0.75;
+}
+
+.sync-status.offline {
+  color: #8b6b7c;
+}
+
+.floating-sync {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9998;
+  margin: 0;
+  width: auto;
+  min-width: 180px;
+}
