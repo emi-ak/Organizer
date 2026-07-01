@@ -820,20 +820,15 @@ startAuth(async (user) => {
 
 window.toggleEdit = toggleEdit;
 window.removeById = removeById;
-
 window.updateActivity = updateActivity;
 window.updateCategory = updateCategory;
 window.deleteCategory = deleteCategory;
 window.deleteActivity = deleteActivity;
-
 window.updateTimeline = updateTimeline;
-
 window.updateModule = updateModule;
 window.updateAssignment = updateAssignment;
 window.deleteAssignment = deleteAssignment;
-
 window.updateAffirmation = updateAffirmation;
 window.updateResource = updateResource;
-
 window.updateGoal = updateGoal;
 window.toggleGoal = toggleGoal;
