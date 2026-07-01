@@ -27,3 +27,22 @@
   margin: 0;
   font-size: 16px;
 }
+
+.glass-widget p {
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.glass-widget h3 {
+  font-size: 48px;
+  margin: 0;
+  color: var(--pink-700);
+}
+
+.glass-widget span {
+  display: block;
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 16px;
+}
