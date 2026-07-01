@@ -1051,7 +1051,7 @@ a {
 .user-card {
   margin: 0;
   padding: 16px;
-  border-radius: 20px;
+  border-radius: 18px;
   background: var(--usercard-back);
   border: 1px solid var(--border);
   width: 100%;
@@ -1542,20 +1542,22 @@ body.theme-orange {
   width: 100%;
   background: transparent;
   color: var(--text);
-  border: 0.5px solid var(--border);
+  border: 1px solid var(--border);
   box-shadow: none;
-  padding: 10px 15px;
+  padding: 14px 15px;
   text-align: left;
   border-radius: 18px;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .settings-button:hover {
   background: var(--settings-hover);
-  transform: none;
+  border-color: var(--nav-link-border);
+  transform: translateX(3px);
 }
 
 .sync-status {
