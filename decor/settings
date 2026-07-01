@@ -1,0 +1,12 @@
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.theme-choice {
+  background: var(--theme-button-bg);
+  color: var(--pink-700);
+  border: 1px solid var(--border);
+}
