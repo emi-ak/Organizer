@@ -1,3 +1,4 @@
+/*butter theme*/ 
 body.theme-butter {
   --pink-50: #fffef2;
   --pink-100: #fff6cf;
@@ -82,6 +83,7 @@ body.theme-butter {
   --primary-light: var(--pink-300);
 }
 
+/*sage theme*/ 
 body.theme-sage {
   --pink-50: #dfe6da;
   --pink-100: #cbd5c0;
@@ -160,6 +162,7 @@ body.theme-sage {
   --primary-light: var(--pink-300)
 }
 
+/*lavender theme*/ 
 body.theme-lavender {
   --pink-50: #efeff8;
   --pink-100: #d2c8e3;
@@ -238,6 +241,7 @@ body.theme-lavender {
   --primary-light: var(--pink-300)
 }
 
+/*blue theme*/ 
 body.theme-blue {
   --pink-50: #dceaf5;
   --pink-100: #ccdfed;
@@ -316,6 +320,7 @@ body.theme-blue {
   --primary-light: var(--pink-300)
 }
 
+/*orange theme*/ 
 body.theme-orange {
   --pink-50: #ffd6a1;
   --pink-100: #f0c58d;
