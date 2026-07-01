@@ -23,9 +23,7 @@ export async function loadPlanner(defaultData) {
     return snap.data().plannerData || defaultData;
   }
 
-  const localData = JSON.parse(localStorage.getItem("emsPlannerData"));
-
-  const starterData = localData || defaultData;
+  const starterData = defaultData;
 
   await setDoc(ref, {
     plannerData: starterData,
