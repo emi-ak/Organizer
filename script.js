@@ -67,6 +67,7 @@ async function save() {
   localStorage.setItem("emsPlannerData", JSON.stringify(data));
 
   try {
+    await new Promise(resolve => setTimeout(resolve, 500));
     await savePlanner(data);
 
     if (syncStatus) {
