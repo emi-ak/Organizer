@@ -35,8 +35,7 @@
   color: var(--muted);
 }
 
-#loginButton,
-#logoutButton{
+#loginButton {
 
     width:100%;
 
