@@ -88,7 +88,6 @@ async function save() {
 }
 
   renderAll();
-}
 
 function percent(done, goal) {
   if (!goal) return 0;
