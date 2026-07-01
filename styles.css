@@ -1544,14 +1544,14 @@ body.theme-orange {
   color: var(--text);
   border: 1px solid var(--border);
   box-shadow: none;
-  padding: 10px 15px;
+  padding: 14px 15px;
   text-align: left;
   border-radius: 18px;
   font-size: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .settings-button:hover {
@@ -1561,8 +1561,8 @@ body.theme-orange {
 }
 
 .settings-button .icon {
-  width: 18px;
-  min-width: 18px;
+  width: 14px;
+  min-width: 14px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
