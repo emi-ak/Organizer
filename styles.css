@@ -12,6 +12,9 @@
   --glass-strong: rgba(255, 255, 255, 0.76);
   --border: rgba(255, 194, 223, 0.58);
   --shadow: 0 24px 70px rgba(217, 79, 147, 0.16);
+  --orb-1: #ffd3e8;
+  --orb-2: #fff0c9;
+  --orb-3: #f9bad5;
 }
 
 * {
@@ -55,7 +58,7 @@ body {
 .orb-one {
   width: 280px;
   height: 280px;
-  background: #ffd3e8;
+  background: var(--orb-1);
   left: 20%;
   top: 8%;
 }
@@ -63,7 +66,7 @@ body {
 .orb-two {
   width: 220px;
   height: 220px;
-  background: #fff0c9;
+  background: var(--orb-2);
   right: 8%;
   top: 28%;
   animation-delay: 1.4s;
@@ -72,7 +75,7 @@ body {
 .orb-three {
   width: 260px;
   height: 260px;
-  background: #f9bad5;
+  background: var(--orb-3);
   right: 22%;
   bottom: 4%;
   animation-delay: 2.2s;
