@@ -900,7 +900,11 @@ document.querySelectorAll(".theme-choice").forEach(button => {
 });
 
 document.querySelector(".settings-button").addEventListener("click", () => {
-  openPage("settings");
+  document.querySelectorAll(".nav-link").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+
+  document.getElementById("settings").classList.add("active");
+  localStorage.setItem("emsPlannerCurrentPage", "settings");
 });
 
 applyTheme(localStorage.getItem("emsPlannerTheme") || "pink");
