@@ -90,3 +90,14 @@
 .year-box[open] .year-arrow::before{
     transform:rotate(90deg);
 }
+
+.course-row {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-bottom: 1px solid var(--goalborder);
+}
+
+.course-row:last-child {
+  border-bottom: 0;
+}
