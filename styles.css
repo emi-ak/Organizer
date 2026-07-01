@@ -177,6 +177,11 @@ main {
   box-shadow: var(--shadow);
 }
 
+.sidebar nav,
+.sidebar-bottom {
+  width: 100%;
+}
+
 .brand {
   display: flex;
   gap: 14px;
@@ -1049,12 +1054,12 @@ a {
 }
 
 .user-card {
+  width: 100%;
   margin: 0;
   padding: 16px;
   border-radius: 18px;
   background: var(--usercard-back);
   border: 1px solid var(--border);
-  width: 100%;
 }
 
 .user-card #logoutButton {
@@ -1527,8 +1532,9 @@ body.theme-orange {
   display: grid;
   gap: 8px;
   align-content: start;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .sidebar-bottom {
     margin-top: 14px;
@@ -1536,6 +1542,7 @@ body.theme-orange {
     gap: 12px;
     padding-top: 0;
     width: 100%
+    box-sizing: border-box;
 }
 
 .settings-button {
