@@ -32,7 +32,7 @@
   --progress-ring-gradient: rgba(255, 226, 240, 0.95);
   --actvitybackground: rgba(255, 244, 250, 0.74);
   --activitypull-border: rgba(217, 79, 147, 0.1);
-  --badge-background: rgba(255, 234, 244, 0.92)
+  --badge-background: rgba(255, 234, 244, 0.92);
   --goalborder: rgba(255, 194, 223, 0.45);
   --pinoutline: rgba(217, 79, 147, 0.32);
   --editpanel-background: rgba(255, 250, 253, 0.72);
@@ -50,6 +50,11 @@
   --usercard-back: rgba(255, 234, 244, 0.65);
   --syncback: rgba(255, 234, 244, 0.62);
   
+  --sidebar-background: rgba(255, 255, 255, 0.48);
+  --hero-background: rgba(255, 255, 255, 0.44);
+  --ring-center: rgba(255, 255, 255, 0.9);
+  --settings-hover: rgba(255, 234, 244, 0.65);
+  --yearbox-background: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -73,8 +78,8 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% 10%, rgba(255, 210, 232, 0.95), transparent 28%),
-    radial-gradient(circle at 88% 12%, rgba(255, 236, 247, 0.95), transparent 30%),
+    radial-gradient(circle at 10% 10%, var(--orb-1), transparent 28%),
+    radial-gradient(circle at 88% 12%, var(--orb-2), transparent 30%),
     linear-gradient(
       135deg, 
       var(--bg-1) 0%, 
@@ -143,7 +148,7 @@ main {
   overflow-y: auto;
   border: 1px solid var(--border);
   border-radius: 32px;
-  background: rgba(255, 255, 255, 0.48);
+  background: var(--sidebar-background);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
   box-shadow: var(--shadow);
@@ -266,7 +271,7 @@ main {
 .hero {
   padding: 30px;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.44);
+  background: var(--hero-background);
   border: 1px solid var(--border);
   backdrop-filter: blur(22px);
   box-shadow: var(--shadow);
@@ -489,7 +494,7 @@ button:hover {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(closest-side, rgba(255, 255, 255, 0.9) 73%, transparent 74% 100%),
+    radial-gradient(closest-side, var(ring-center) 73%, transparent 74% 100%),
     conic-gradient(var(--pink-500) calc(var(--value) * 1%), var(--progress-ring-gradient) 0);
   animation: ringPop 0.75s ease both;
 }
@@ -833,7 +838,7 @@ a {
   border-radius: 20px;
   display: grid;
   place-items: center;
-  background: var(pinplaceholder-background);
+  background: var(--pinplaceholder-background);
   color: var(--pink-700);
   font-size: 42px;
 }
@@ -902,7 +907,7 @@ a {
   margin: 22px 0;
   padding: 24px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--yearbox-background);
   border: 1px solid var(--yearbox-border);
   box-shadow: var(--shadow);
 }
@@ -1206,6 +1211,14 @@ body.theme-cream {
   
   --usercard-back: rgba(242, 231, 220, 0.65);
   --syncback: rgba(242, 231, 220, 0.62);
+
+  --sidebar-background: rgba(255, 252, 248, 0.48);
+  --hero-background: rgba(255, 250, 246, 0.44);
+  --ring-center: rgba(255, 253, 250, 0.90);
+  --settings-hover: rgba(242, 231, 220, 0.65);
+  --yearbox-background: rgba(255, 252, 248, 0.50);
+  --glass: rgba(255, 252, 248, 0.56);
+  --glass-strong: rgba(255, 252, 248, 0.76);
 }
 
 body.theme-sage {
@@ -1270,6 +1283,14 @@ body.theme-sage {
   
   --usercard-back: rgba(230, 242, 231, 0.65);
   --syncback: rgba(230, 242, 231, 0.62);
+
+  --sidebar-background: rgba(247, 250, 245, 0.48);
+  --hero-background: rgba(244, 249, 241, 0.44);
+  --ring-center: rgba(251, 253, 250, 0.90);
+  --settings-hover: rgba(230, 242, 231, 0.65);
+  --yearbox-background: rgba(247, 250, 245, 0.50);
+  --glass: rgba(244, 249, 241, 0.56);
+  --glass-strong: rgba(244, 249, 241, 0.76);
 }
 
 body.theme-lavender {
@@ -1334,6 +1355,14 @@ body.theme-lavender {
   
   --usercard-back: rgba(239, 232, 248, 0.65);
   --syncback: rgba(239, 232, 248, 0.62);
+
+  --sidebar-background: rgba(249, 247, 252, 0.48);
+  --hero-background: rgba(248, 245, 252, 0.44);
+  --ring-center: rgba(252, 251, 254, 0.90);
+  --settings-hover: rgba(239, 232, 248, 0.65);
+  --yearbox-background: rgba(249, 247, 252, 0.50);
+  --glass: rgba(248, 245, 252, 0.56);
+  --glass-strong: rgba(248, 245, 252, 0.76);
 }
 
 body.theme-blue {
@@ -1398,6 +1427,14 @@ body.theme-blue {
   
   --usercard-back: rgba(230, 241, 255, 0.65);
   --syncback: rgba(230, 241, 255, 0.62);
+
+  --sidebar-background: rgba(247, 250, 254, 0.48);
+  --hero-background: rgba(244, 249, 255, 0.44);
+  --ring-center: rgba(252, 253, 255, 0.90);
+  --settings-hover: rgba(230, 241, 255, 0.65);
+  --yearbox-background: rgba(247, 250, 254, 0.50);
+  --glass: rgba(244, 249, 255, 0.56);
+  --glass-strong: rgba(244, 249, 255, 0.76);
 }
 
 body.theme-orange {
@@ -1463,6 +1500,14 @@ body.theme-orange {
   --usercard-back: rgba(255, 242, 224, 0.65);
   --syncback: rgba(255, 242, 224, 0.62);
 
+  --sidebar-background: rgba(255, 250, 245, 0.48);
+  --hero-background: rgba(255, 248, 240, 0.44);
+  --ring-center: rgba(255, 253, 250, 0.90);
+  --settings-hover: rgba(255, 242, 224, 0.65);
+  --yearbox-background: rgba(255, 250, 245, 0.50);
+  --glass: rgba(255, 248, 240, 0.56);
+  --glass-strong: rgba(255, 248, 240, 0.76);
+
 }
 
 @media (min-width: 821px) {
@@ -1505,7 +1550,7 @@ body.theme-orange {
 }
 
 .settings-button:hover {
-  background: rgba(255, 234, 244, 0.65);
+  background: var(--settings-hover);
   transform: none;
 }
 
