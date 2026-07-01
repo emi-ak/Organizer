@@ -27,3 +27,7 @@ document.querySelectorAll(".nav-link").forEach(button => {
     openPage(button.dataset.page);
   });
 });
+
+document.querySelector(".settings-button").addEventListener("click", () => {
+  openPage("settings");
+});
