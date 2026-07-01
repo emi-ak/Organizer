@@ -899,5 +899,3 @@ applyTheme(savedTheme);
 document.querySelector(".settings-button").addEventListener("click", () => {
   openPage("settings");
 });
-
-applyTheme(localStorage.getItem("emsPlannerTheme") || "pink");
