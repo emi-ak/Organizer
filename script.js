@@ -1,5 +1,6 @@
 import { startAuth } from "./js/auth.js";
 import { setCurrentUser, loadPlanner, savePlanner } from "./js/database.js";
+import { defaultData, todayISO } from "./js/data.js";
 
 let data = null;
 
