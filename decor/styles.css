@@ -197,6 +197,12 @@ h3 {
 }
 /*------------------------------------------------------*/
 /* Page Layout */
+main {
+  margin-left: 320px;
+  padding: 34px;
+  width: calc(100% - 320px);
+}
+
 .page {
   display: none;
   animation: pageIn 0.3s ease;
@@ -1167,17 +1173,6 @@ button:hover {
   color: var(--pink-700) !important;
 }
 /*------------------------------------------------------*/
-
-main {
-  margin-left: 320px;
-  padding: 34px;
-  width: calc(100% - 320px);
-}
-
-.stack {
-  display: grid;
-  gap: 16px;
-}
 
 .item-header {
   display: flex;
