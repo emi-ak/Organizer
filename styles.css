@@ -1047,3 +1047,21 @@ a {
   margin: 4px 0 12px;
   word-break: break-word;
 }
+
+.sidebar {
+  width: 290px;
+}
+
+main {
+  margin-left: 340px;
+  width: calc(100% - 340px);
+}
+
+.user-card {
+  margin: 18px 0 28px;
+  padding: 16px;
+}
+
+.user-card #logoutButton {
+  margin-top: 12px;
+}
