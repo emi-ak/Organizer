@@ -18,6 +18,7 @@
   --bg-1: #fff7fb;
   --bg-2: #fff0f7;
   --bg-3: #fffdf8;
+  --theme-button-bg: rgba(255, 234, 244, 0.85)
 }
 
 * {
@@ -1102,7 +1103,7 @@ a {
 }
 
 .theme-choice {
-  background: rgba(255, 234, 244, 0.85);
+  background: var(--theme-button-bg);
   color: var(--pink-700);
   border: 1px solid var(--border);
 }
@@ -1123,6 +1124,7 @@ body.theme-cream {
   --bg-1: #f0eae1;
   --bg-2: #e6dacc;
   --bg-3: #fffdf8;  
+  --theme-button-bg: rgba(214, 209, 199, 0.85)
 }
 
 body.theme-sage {
@@ -1141,6 +1143,7 @@ body.theme-sage {
   --bg-1: #c9d4c5;
   --bg-2: #b0bdac;
   --bg-3: #fffdf8;  
+  --theme-button-bg: rgba(230, 242, 231, 0.85)
 }
 
 body.theme-lavender {
@@ -1159,6 +1162,7 @@ body.theme-lavender {
   --bg-1: #d0cadb;
   --bg-2: #baabd6;
   --bg-3: #fffdf8;  
+  --theme-button-bg: rgba(239, 232, 248, 0.85)
 }
 
 body.theme-blue {
@@ -1177,6 +1181,7 @@ body.theme-blue {
   --bg-1: #d4e7fc;
   --bg-2: #b5cde8;
   --bg-3: #fffdf8;  
+  --theme-button-bg: rgba(230, 241, 255, 0.85)
 }
 
 body.theme-orange {
@@ -1195,6 +1200,7 @@ body.theme-orange {
   --bg-1: #fcd9b6;
   --bg-2: #fac38c;
   --bg-3: #fffdf8; 
+  --theme-button-bg: rgba(255, 242, 224, 0.85)
 }
 
 @media (min-width: 821px) {
