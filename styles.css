@@ -1129,3 +1129,11 @@ body.theme-lavender {
   --muted: #786b8b;
   --border: rgba(190, 165, 230, 0.45);
 }
+
+@media (min-width: 821px) {
+  main {
+    margin-left: 320px !important;
+    width: calc(100% - 320px) !important;
+    padding: 34px !important;
+  }
+}
