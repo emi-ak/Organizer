@@ -513,7 +513,7 @@ button:hover {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(closest-side, var(ring-center) 73%, transparent 74% 100%),
+    radial-gradient(closest-side, var(--ring-center) 73%, transparent 74% 100%),
     conic-gradient(var(--pink-500) calc(var(--value) * 1%), var(--progress-ring-gradient) 0);
   animation: ringPop 0.75s ease both;
 }
@@ -1006,63 +1006,6 @@ a {
 .auth-screen {
   position: fixed;
   inset: 0;
-  z-index: 999;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255, 210, 232, 0.95), transparent 30%),
-    linear-gradient(135deg, #fff7fb, #fffdf8);
-}
-
-.auth-screen.hidden {
-  display: none;
-}
-
-.auth-card {
-  width: min(520px, 100%);
-  padding: 46px;
-  border-radius: 34px;
-  text-align: center;
-  background: rgba(255,255,255,.62);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(22px);
-}
-
-.auth-card h1 {
-  font-size: 54px;
-  margin: 0 0 8px;
-}
-
-.auth-card p {
-  color: var(--muted);
-}
-
-.user-card {
-  margin: 18px 0 28px;
-  padding: 14px;
-  border-radius: 20px;
-  background: var(--usercard-back);
-  border: 1px solid var(--border);
-}
-
-.user-card p {
-  margin: 0;
-  font-weight: 700;
-  color: var(--pink-700);
-}
-
-.user-card small {
-  display: block;
-  color: var(--muted);
-  margin: 4px 0 12px;
-  word-break: break-word;
-}
-
-.auth-screen {
-  position: fixed;
-  inset: 0;
   z-index: 9999;
   display: grid;
   place-items: center;
@@ -1151,7 +1094,6 @@ a {
   color: #8b6b7c;
 }
 
-theme 
 .theme-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(180px, 1fr));
