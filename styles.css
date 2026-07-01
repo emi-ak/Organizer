@@ -1182,6 +1182,7 @@ body.theme-cream {
   --ring-center: rgba(255, 253, 250, 0.90);
   --settings-hover: rgba(242, 231, 220, 0.65);
   --yearbox-background: rgba(255, 252, 248, 0.50);
+  --shadow: 0 24px 70px rgba(115, 109, 100, 0.16);
 }
 
 body.theme-sage {
@@ -1254,6 +1255,8 @@ body.theme-sage {
   --ring-center: rgba(251, 253, 250, 0.90);
   --settings-hover: rgba(230, 242, 231, 0.65);
   --yearbox-background: rgba(247, 250, 245, 0.50);
+
+  --shadow: 0 24px 70px rgba(87, 99, 76, 0.16);
 }
 
 body.theme-lavender {
@@ -1326,6 +1329,8 @@ body.theme-lavender {
   --ring-center: rgba(252, 251, 254, 0.90);
   --settings-hover: rgba(239, 232, 248, 0.65);
   --yearbox-background: rgba(249, 247, 252, 0.50);
+
+  --shadow: 0 24px 70px rgba(115, 92, 153, 0.16);
 }
 
 body.theme-blue {
@@ -1398,6 +1403,8 @@ body.theme-blue {
   --ring-center: rgba(252, 253, 255, 0.90);
   --settings-hover: rgba(230, 241, 255, 0.65);
   --yearbox-background: rgba(247, 250, 254, 0.50);
+
+  --shadow: 0 24px 70px rgba(106, 133, 156, 0.16);
 }
 
 body.theme-orange {
@@ -1471,6 +1478,7 @@ body.theme-orange {
   --settings-hover: rgba(255, 242, 224, 0.65);
   --yearbox-background: rgba(255, 250, 245, 0.50);
 
+  --shadow: 0 24px 70px rgba(247, 166, 59, 0.16);
 }
 
 @media (min-width: 821px) {
