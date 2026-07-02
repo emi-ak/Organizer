@@ -1,4 +1,5 @@
 import { auth, provider } from "./firebase.js";
+import { loadPlanner } from "./database.js";
 
 import {
   signInWithPopup,
