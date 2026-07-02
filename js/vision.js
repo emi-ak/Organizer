@@ -1,8 +1,7 @@
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function renderVision() {
+  const data = getData();
   visionBoard.innerHTML = data.vision.map((v, index) => `
     <div class="pin" draggable="true" data-index="${index}">
       ${v.image ? `<img src="${v.image}" alt="${escapeHTML(v.title || "Vision image")}">` : `<div class="pin-placeholder">✦</div>`}
@@ -16,6 +15,7 @@ export function renderVision() {
 }
 
 export function enableVisionDragDrop() {
+  const data = getData();
   const pins = document.querySelectorAll(".pin");
   let draggedIndex = null;
 
