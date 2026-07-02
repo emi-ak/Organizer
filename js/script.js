@@ -14,8 +14,19 @@ import "./affirmation.js";
 import "./resources.js";
 import "./todo.js";
 
-let data = null;
-let classificationVisible = false;
+import { setData } from "./state.js";
+import { renderAll } from "./renderall.js";
+import { openPage } from "./navigation.js";
+
+import { toggleEdit, removeById } from "./utils.js";
+import { updateActivity, updateCategory, deleteCategory, deleteActivity } from "./activities.js";
+import { updateTimeline } from "./timeline.js";
+import { updateModule, updateAssignment, deleteAssignment } from "./coursework.js";
+import { updateAffirmation } from "./affirmation.js";
+import { updateResource } from "./resources.js";
+import { updateGoal, toggleGoal } from "./todo.js";
+
+import {setData} from "./state.js";
 
 document.querySelectorAll(".form-toggle").forEach(button => {
   button.addEventListener("click", () => {
@@ -33,7 +44,7 @@ startAuth(async (user) => {
   console.log("Signed in as:", user.email);
 
   setCurrentUser(user);
-  data = await loadPlanner(defaultData);
+  const loadedData = await loadPlanner(defaultData);
 
   data.modules = (data.modules || []).map(module => ({
     ...module,
