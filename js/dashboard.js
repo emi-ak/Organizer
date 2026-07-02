@@ -2,6 +2,8 @@ import { percent, totalHours } from "./utils.js";
 import { getData, getClassificationVisible } from "./state.js";
 import { averageOfModuleTotals, classifyUK } from "./coursework.js";
 
+openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
+
 export function ringHTML(name, done, goal) {
   const p = percent(done, goal);
   return `
