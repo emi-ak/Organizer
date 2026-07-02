@@ -1,4 +1,6 @@
 import { getData } from "./state.js";
+import { save } from "./save.js";
+import { escapeHTML, toggleEdit, removeById } from "./utils.js";
 
 export function renderTimeline() {
   const data = getData();
