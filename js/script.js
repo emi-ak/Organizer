@@ -3,7 +3,7 @@ import { setCurrentUser, loadPlanner } from "./database.js";
 import { defaultData } from "./data.js";
 import { setData } from "./state.js";
 
-import { renderAll } from "./renderall.js";
+import { renderAll } from "./renderall.js?v=3";
 import { openPage } from "./navigation.js";
 
 import { toggleEdit, removeById } from "./utils.js";
@@ -16,7 +16,7 @@ import { updateGoal, toggleGoal } from "./todo.js";
 
 import "./theme.js";
 import "./forms.js";
-import "./dashboard.js";
+import "./dashboard.js?v=3";
 import "./vision.js";
 
 document.querySelectorAll(".form-toggle").forEach(button => {
