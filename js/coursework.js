@@ -1,7 +1,8 @@
-import { getData } from "./state.js";
+import { getData, getClassificationVisible, toggleClassificationVisible } from "./state.js";
+import { save } from "./save.js";
+import { escapeHTML, safeConfirmDelete, toggleEdit, removeById } from "./utils.js";
 
 export function classifyUK(mark) {
-  const data = getData();
   if (mark >= 70) return "1st Honors";
   if (mark >= 60) return "2:1 Honors";
   if (mark >= 50) return "2:2 Honors";
@@ -11,7 +12,6 @@ export function classifyUK(mark) {
 }
 
 export function moduleTotal(module) {
-  const data = getData();
   const assignments = module.assignments || [];
   const totalWeight = assignments.reduce((sum, a) => sum + Number(a.weight || 0), 0);
   if (!assignments.length || totalWeight === 0) return "";
@@ -169,15 +169,15 @@ export function deleteAssignment(moduleId, assignmentId) {
   save();
 }
 
-document.getElementById("toggleClassification").addEventListener("click", () => {
-  classificationVisible = !classificationVisible;
+document.getElementById("toggleClassification")?.addEventListener("click", () => {
+  const visible = toggleClassificationVisible();
 
   const moduleAverage = averageOfModuleTotals();
   const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
 
   document.getElementById("dashClassification").textContent =
-    classificationVisible ? classification : "";
+    visible ? classification : "";
 
   document.getElementById("toggleClassification").textContent =
-    classificationVisible ? "Hide" : "Show";
+    visible ? "Hide" : "Show";
 });
