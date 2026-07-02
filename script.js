@@ -30,19 +30,6 @@ function averageOfModuleTotals() {
   return average.toFixed(1);
 }
 
-function ringHTML(name, done, goal) {
-  const p = percent(done, goal);
-  return `
-    <div class="ring-card">
-      <div class="progress-ring" style="--value:${p}">
-        <span>${p}%</span>
-      </div>
-      <p class="ring-label">${name}</p>
-      <p class="ring-sub">${done} / ${goal} hrs</p>
-    </div>
-  `;
-}
-
 function updateActivity(categoryId, activityId) {
   const category = data.categories.find(c => c.id === categoryId);
   const activity = category.activities.find(a => a.id === activityId);
