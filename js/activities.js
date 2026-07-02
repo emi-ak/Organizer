@@ -1,6 +1,7 @@
 import { save } from "./save.js";
-import { percent } from "./utils.js";
-import { getData} from "./state.js";
+import { getData } from "./state.js";
+import { totalHours, escapeHTML, safeConfirmDelete, toggleEdit } from "./utils.js";
+import { ringHTML } from "./dashboard.js";
 
 export function renderActivities() {
   const data = getData();
