@@ -1,18 +1,19 @@
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function importanceRank(value) {
+  const data = getData();
   return { High: 0, Medium: 1, Low: 2 }[value] ?? 3;
 }
 
 export function importanceClass(value) {
+  const data = getData();
   if (value === "High") return "importance-high";
   if (value === "Medium") return "importance-medium";
   return "importance-low";
 }
 
 export function renderGoals() {
+  const data = getData();
   const sorted = [...data.goals].sort((a, b) => {
     const importanceDiff = importanceRank(a.importance) - importanceRank(b.importance);
     if (importanceDiff !== 0) return importanceDiff;
@@ -50,6 +51,7 @@ export function renderGoals() {
 }
 
 export function updateGoal(id) {
+  const data = getData();
   const goal = data.goals.find(g => g.id === id);
   goal.text = document.getElementById(`goal-text-${id}`).value;
   goal.dueDate = document.getElementById(`goal-date-${id}`).value;
@@ -59,6 +61,7 @@ export function updateGoal(id) {
 }
 
 export function toggleGoal(id) {
+  const data = getData();
   const goal = data.goals.find(g => g.id === id);
   goal.done = !goal.done;
   save();
