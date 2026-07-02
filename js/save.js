@@ -1,4 +1,4 @@
-async function save() {
+export async function save() {
     const syncStatus = document.getElementById("syncStatus");
 
     if (syncStatus) {
