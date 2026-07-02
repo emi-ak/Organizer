@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 export function importanceRank(value) {
   return { High: 0, Medium: 1, Low: 2 }[value] ?? 3;
 }
