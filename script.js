@@ -4,19 +4,6 @@ import { defaultData, todayISO } from "./js/data.js";
 
 let data = null;
 
-function renderAll() {
-  if (!data) return;
-
-  renderDashboard();
-  renderActivities();
-  renderTimeline();
-  renderModules();
-  renderVision();
-  renderAffirmations();
-  renderResources();
-  renderGoals();
-}
-
 document.querySelectorAll(".form-toggle").forEach(button => {
   button.addEventListener("click", () => {
     const form = document.getElementById(button.dataset.target);
