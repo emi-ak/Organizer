@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 export function renderResources() {
   resourceList.innerHTML = data.resources.map(r => `
     <div class="item">
