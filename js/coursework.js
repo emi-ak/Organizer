@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 export function classifyUK(mark) {
   if (mark >= 70) return "1st Honors";
   if (mark >= 60) return "2:1 Honors";
