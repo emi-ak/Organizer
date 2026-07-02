@@ -44,12 +44,15 @@ startAuth(async (user) => {
   console.log("Signed in as:", user.email);
 
   setCurrentUser(user);
+
   const loadedData = await loadPlanner(defaultData);
 
-  data.modules = (data.modules || []).map(module => ({
+  loadedData.modules = (loadedData.modules || []).map(module => ({
     ...module,
     year: module.year || "Year 1"
   }));
+
+  setData(loadedData);
 
   renderAll();
   openPage(localStorage.getItem("emsPlannerCurrentPage") || "dashboard");
