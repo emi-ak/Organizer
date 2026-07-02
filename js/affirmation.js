@@ -1,4 +1,6 @@
 import { getData } from "./state.js";
+import { save } from "./save.js";
+import { escapeHTML, toggleEdit, removeById } from "./utils.js";
 
 export function renderRandomAffirmation() {
   const data = getData();
@@ -38,10 +40,6 @@ export function updateAffirmation(id) {
   save();
 }
 
-const shuffleButton = document.getElementById("shuffleAffirmation");
-
-if (shuffleButton) {
-  shuffleButton.addEventListener("click", () => {
-    renderRandomAffirmation();
-  });
-}
+document
+  .getElementById("shuffleAffirmation")
+  ?.addEventListener("click", renderRandomAffirmation);
