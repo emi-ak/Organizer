@@ -1,4 +1,4 @@
-function renderVision() {
+export function renderVision() {
   visionBoard.innerHTML = data.vision.map((v, index) => `
     <div class="pin" draggable="true" data-index="${index}">
       ${v.image ? `<img src="${v.image}" alt="${escapeHTML(v.title || "Vision image")}">` : `<div class="pin-placeholder">✦</div>`}
@@ -11,7 +11,7 @@ function renderVision() {
   enableVisionDragDrop();
 }
 
-function enableVisionDragDrop() {
+export function enableVisionDragDrop() {
   const pins = document.querySelectorAll(".pin");
   let draggedIndex = null;
 
