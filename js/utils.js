@@ -1,3 +1,6 @@
+import { getData } from "./state.js";
+import { save } from "./save.js";
+
 export function percent(done, goal) {
   if (!goal) return 0;
   return Math.min(100, Math.round((done / goal) * 100));
@@ -26,6 +29,10 @@ export function toggleEdit(id) {
 
 export function removeById(collection, id) {
   if (!confirm("Are you sure you want to delete this?")) return;
+
+  const data = getData();
+  if (!data) return;
+
   data[collection] = data[collection].filter(item => item.id !== id);
   save();
 }
