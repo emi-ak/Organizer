@@ -1,9 +1,8 @@
-import { percent } from "./utils.js";
-import { db } from "./firebase.js";
-import { getData } from "./state.js";
+import { percent, totalHours } from "./utils.js";
+import { getData, getClassificationVisible } from "./state.js";
+import { averageOfModuleTotals, classifyUK } from "./coursework.js";
 
 export function ringHTML(name, done, goal) {
-  const data = getData();
   const p = percent(done, goal);
   return `
     <div class="ring-card">
@@ -29,7 +28,7 @@ export function renderDashboard() {
   const classification = moduleAverage ? classifyUK(Number(moduleAverage)) : "—";
   
   dashClassification.textContent =
-    classificationVisible ? classification : "";
+    getClassificationVisible() ? classification : "";
 
   dashboardRings.innerHTML = data.categories.map(c => ringHTML(c.name, totalHours(c), c.goal)).join("");
 
