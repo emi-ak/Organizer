@@ -1,13 +1,13 @@
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function renderRandomAffirmation() {
+  const data = getData();
   const random = data.affirmations[Math.floor(Math.random() * data.affirmations.length)];
   affirmationText.textContent = random ? random.text : "Add your first affirmation.";
 }
 
 export function renderAffirmations() {
+  const data = getData();
   renderRandomAffirmation();
   affirmationList.innerHTML = data.affirmations.map(a => `
     <div class="item">
@@ -31,6 +31,7 @@ export function renderAffirmations() {
 }
 
 export function updateAffirmation(id) {
+  const data = getData();
   const affirmation = data.affirmations.find(a => a.id === id);
   affirmation.date = document.getElementById(`affirmation-date-${id}`).value;
   affirmation.text = document.getElementById(`affirmation-text-${id}`).value;
