@@ -1,4 +1,6 @@
 import { getData } from "./state.js";
+import { save } from "./save.js";
+import { escapeHTML, removeById } from "./utils.js";
 
 export function renderVision() {
   const data = getData();
@@ -15,7 +17,7 @@ export function renderVision() {
 }
 
 export function enableVisionDragDrop() {
-  const data = getData();
+  const vision = getData().vision;
   const pins = document.querySelectorAll(".pin");
   let draggedIndex = null;
 
@@ -44,8 +46,8 @@ export function enableVisionDragDrop() {
       const droppedIndex = Number(pin.dataset.index);
       if (draggedIndex === null || draggedIndex === droppedIndex) return;
 
-      const moved = data.vision.splice(draggedIndex, 1)[0];
-      data.vision.splice(droppedIndex, 0, moved);
+      const moved = vision.splice(draggedIndex, 1)[0];
+      vision.splice(droppedIndex, 0, moved);
       save();
     });
   });
