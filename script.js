@@ -4,41 +4,6 @@ import { defaultData, todayISO } from "./js/data.js";
 
 let data = null;
 
-function renderRandomAffirmation() {
-  const random = data.affirmations[Math.floor(Math.random() * data.affirmations.length)];
-  affirmationText.textContent = random ? random.text : "Add your first affirmation.";
-}
-
-function renderAffirmations() {
-  renderRandomAffirmation();
-  affirmationList.innerHTML = data.affirmations.map(a => `
-    <div class="item">
-      <div class="item-header">
-        <div>
-          <span class="badge">${a.date}</span>
-          <p>${a.text}</p>
-        </div>
-        <div class="action-row">
-          <button class="soft-btn" onclick="toggleEdit('edit-affirmation-${a.id}')">Edit</button>
-          <button class="delete" onclick="removeById('affirmations','${a.id}')">Delete</button>
-        </div>
-      </div>
-      <div id="edit-affirmation-${a.id}" class="edit-panel">
-        <input id="affirmation-date-${a.id}" type="date" value="${a.date}">
-        <textarea id="affirmation-text-${a.id}">${escapeHTML(a.text)}</textarea>
-        <button onclick="updateAffirmation('${a.id}')">Save Affirmation</button>
-      </div>
-    </div>
-  `).join("");
-}
-
-function updateAffirmation(id) {
-  const affirmation = data.affirmations.find(a => a.id === id);
-  affirmation.date = document.getElementById(`affirmation-date-${id}`).value;
-  affirmation.text = document.getElementById(`affirmation-text-${id}`).value;
-  save();
-}
-
 function renderResources() {
   resourceList.innerHTML = data.resources.map(r => `
     <div class="item">
