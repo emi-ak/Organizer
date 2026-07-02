@@ -1,3 +1,5 @@
+import { percent } from "./utils.js";
+
 function ringHTML(name, done, goal) {
   const p = percent(done, goal);
   return `
