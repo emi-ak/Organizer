@@ -3,7 +3,7 @@ document.getElementById("mobileMenu").addEventListener("click", () => {
   sidebar.classList.toggle("open");
 });
 
-function openPage(pageName) {
+export function openPage(pageName) {
   document.querySelectorAll(".nav-link").forEach(b => b.classList.remove("active"));
   document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
 
