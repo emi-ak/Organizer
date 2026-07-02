@@ -3,11 +3,11 @@ export function percent(done, goal) {
   return Math.min(100, Math.round((done / goal) * 100));
 }
 
-function totalHours(category) {
+export function totalHours(category) {
   return category.activities.reduce((sum, a) => sum + Number(a.hours || 0), 0);
 }
 
-function escapeHTML(value) {
+export function escapeHTML(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll('"', "&quot;")
@@ -15,16 +15,16 @@ function escapeHTML(value) {
     .replaceAll(">", "&gt;");
 }
 
-function safeConfirmDelete(message = "Are you sure you want to delete this?") {
+export function safeConfirmDelete(message = "Are you sure you want to delete this?") {
   return confirm(message);
 }
 
-function toggleEdit(id) {
+export function toggleEdit(id) {
   const el = document.getElementById(id);
   if (el) el.classList.toggle("open");
 }
 
-function removeById(collection, id) {
+export function removeById(collection, id) {
   if (!confirm("Are you sure you want to delete this?")) return;
   data[collection] = data[collection].filter(item => item.id !== id);
   save();
