@@ -1,12 +1,12 @@
 import { getData } from "./state.js";
+import { save } from "./save.js";
+import { escapeHTML, toggleEdit, removeById } from "./utils.js";
 
 export function importanceRank(value) {
-  const data = getData();
   return { High: 0, Medium: 1, Low: 2 }[value] ?? 3;
 }
 
 export function importanceClass(value) {
-  const data = getData();
   if (value === "High") return "importance-high";
   if (value === "Medium") return "importance-medium";
   return "importance-low";
