@@ -1,6 +1,6 @@
 import { save } from "./save.js";
 import { percent } from "./utils.js";
-import { getData} from "./state.js"}
+import { getData} from "./state.js";
 
 export function renderActivities() {
   const data = getData();
@@ -56,6 +56,7 @@ export function renderActivities() {
 }
 
 export function updateActivity(categoryId, activityId) {
+  const data = getData();
   const category = data.categories.find(c => c.id === categoryId);
   const activity = category.activities.find(a => a.id === activityId);
   activity.name = document.getElementById(`activity-name-${activityId}`).value;
@@ -66,6 +67,7 @@ export function updateActivity(categoryId, activityId) {
 }
 
 export function updateCategory(id) {
+  const data = getData();
   const category = data.categories.find(c => c.id === id);
   category.name = document.getElementById(`category-name-${id}`).value;
   category.goal = Number(document.getElementById(`category-goal-${id}`).value);
@@ -73,12 +75,14 @@ export function updateCategory(id) {
 }
 
 export function deleteCategory(id) {
+  const data = getData();
   if (!safeConfirmDelete("Delete this activity category and all activities inside it?")) return;
   data.categories = data.categories.filter(c => c.id !== id);
   save();
 }
 
 export function deleteActivity(categoryId, activityId) {
+  const data = getData();
   if (!safeConfirmDelete()) return;
   const category = data.categories.find(c => c.id === categoryId);
   category.activities = category.activities.filter(a => a.id !== activityId);
