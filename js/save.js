@@ -2,6 +2,8 @@ import { savePlanner } from "./database.js";
 import { renderAll } from "./renderall.js";
 import { getData } from "./state.js";
 
+const data = getData();
+
 export async function save() {
     const syncStatus = document.getElementById("syncStatus");
 
