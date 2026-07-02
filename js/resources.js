@@ -1,10 +1,16 @@
 import { getData } from "./state.js";
+import { save } from "./save.js";
+import { escapeHTML, toggleEdit, removeById } from "./utils.js";
 
 export function renderResources() {
   const data = getData();
   resourceList.innerHTML = data.resources.map(r => `
     <div class="item">
-      <h3>${r.url ? `<a href="${r.url}" target="_blank">${r.title}</a>` : r.title}</h3>
+      <h3>${
+        r.url
+          ? `<a href="${escapeHTML(r.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(r.title)}</a>`
+          : escapeHTML(r.title)
+      }</h3>
       <p>${r.notes || ""}</p>
       <div class="action-row">
         <button class="soft-btn" onclick="toggleEdit('edit-resource-${r.id}')">Edit</button>
