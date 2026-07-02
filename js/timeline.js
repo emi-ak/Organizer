@@ -1,4 +1,4 @@
-function renderTimeline() {
+export function renderTimeline() {
   const sorted = [...data.timeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   timelineList.innerHTML = sorted.map((t, index) => `
     <div class="timeline-item">
@@ -28,7 +28,7 @@ function renderTimeline() {
   `).join("");
 }
 
-function updateTimeline(id) {
+export function updateTimeline(id) {
   const item = data.timeline.find(t => t.id === id);
   item.title = document.getElementById(`timeline-title-${id}`).value;
   item.date = document.getElementById(`timeline-date-${id}`).value;
