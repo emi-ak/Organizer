@@ -1,4 +1,4 @@
-function percent(done, goal) {
+export function percent(done, goal) {
   if (!goal) return 0;
   return Math.min(100, Math.round((done / goal) * 100));
 }
