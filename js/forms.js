@@ -1,3 +1,7 @@
+import { getData } from "./state.js";
+
+const data = getData();
+
 document.getElementById("categoryForm").addEventListener("submit", e => {
   e.preventDefault();
   data.categories.push({
