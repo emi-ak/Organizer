@@ -1,8 +1,7 @@
 import { getData } from "./state.js";
 
-const data = getData();
-
 export function renderTimeline() {
+  const data = getData();
   const sorted = [...data.timeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   timelineList.innerHTML = sorted.map((t, index) => `
     <div class="timeline-item">
@@ -33,6 +32,7 @@ export function renderTimeline() {
 }
 
 export function updateTimeline(id) {
+  const data = getData();
   const item = data.timeline.find(t => t.id === id);
   item.title = document.getElementById(`timeline-title-${id}`).value;
   item.date = document.getElementById(`timeline-date-${id}`).value;
